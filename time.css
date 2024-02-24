@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000000;
+}
+
+.choices p {
+    color:#fff ;
+    font-family:cursive;
+    text-align: center;
+    font-size: 27px;
+}
+
+.choices {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.choices img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    transition: transform 0.3s ease; 
+    border: 2px solid rgb(69, 220, 231);
+    border-radius: 20px;
+}
+
+.choices img:hover {
+    transform: scale(1.1); 
+}
+
+.heading {
+    text-align: center;
+    margin-top: 90px;
+    color: #fffbfb;
+}
+
+ #time{
+    display: flex;
+    gap: 30px;
+}
+#time .circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba( 0, 0, 0, 0.25);
+}
+
+#time .circle::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 10px solid #1f1e21;
+    border-radius: 50%;
+}
+
+#time .circle::after{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: #161519;
+    border-radius: 50%;
+    border: 15px solid #3c3a41;
+    box-shadow: inset 0 5px 10px rgba( 0, 0, 0, 0.25), 0 10px 10px rgba( 0, 0, 0, 0.75), 0 -2px 2px rgba( 255, 255, 255, 0.5), inset 0 4px 2px rgba( 0, 0, 0, 0.25), inset 0 -2px 2px rgba( 255, 255, 255, 0.5);
+}
+
+#time .circle svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+#time .circle svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 8;
+    stroke: var(--clr);
+    stroke-linecap:round;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440; 
+}
+
+#time div{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+    z-index: 10000;
+    color: var(--clr);
+    font-size: 2rem;
+    transform:  translateY(-5px);
+}
+
+#time div span{
+    position: absolute;
+    transform: translateX(-50%) translateY(-15px);
+    font-size: .40em;
+    font-weight: 500;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
